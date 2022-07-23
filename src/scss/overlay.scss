@@ -1,0 +1,19 @@
+.overlay {
+  cursor: pointer;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  background-color: $background-color-1;
+  transition: all 0.75s ease-in-out;
+  pointer-events: none;
+  z-index: 3;
+
+  &--active {
+    transition: all 0.75s ease-in-out;
+    opacity: 0.96;
+    pointer-events: all;
+  }
+}

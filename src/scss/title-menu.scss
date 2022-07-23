@@ -1,0 +1,66 @@
+.title-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    padding: 0 16px 0 12px;
+    margin: 24px 0 0 0;
+    border-left: 4px solid $decoration-color-2;
+
+    @media screen and (min-width: $screen-tablet) {
+      padding-left: 20px;
+    }
+
+    @media screen and (min-width: $screen-wide) {
+      margin: 0;
+      padding-left: 30px;
+    }
+
+    h1 {
+      font-size: $font-size-3;
+      line-height: $line-height-2;
+      letter-spacing: $letter-spacing-2;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+      font-weight: 700;
+      font-style: normal;
+    }
+  }
+
+  &__menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: none;
+
+    @media screen and (min-width: $screen-wide) {
+      display: flex;
+      padding-right: 8px;
+      gap: 32px;
+    }
+  }
+
+  &__item {
+
+    &:first-child::before {
+      content: "Оставить заявку";
+      font-size: $font-size-2;
+      line-height: $line-height-1;
+      letter-spacing: $letter-spacing-1;
+      font-weight: 500;
+      margin-right: 8px;
+    }
+
+    &:last-child::before {
+      content: "Статус ремонта";
+      font-size: $font-size-2;
+      line-height: $line-height-1;
+      letter-spacing: $letter-spacing-1;
+      font-weight: 500;
+      margin-right: 9px;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.navigation {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    padding: 4px 0 4px 16px;
+
+    @media screen and (min-width: $screen-mobile-wide) {
+      padding-left: 24px;
+    }
+
+    &:hover,
+    &:focus,
+    &:active,
+    &--active {
+      border-left: $decoration-color-2 4px solid;
+      padding-left: 12px;
+
+      @media screen and (min-width: $screen-mobile-wide) {
+        padding-left: 20px;
+      }
+
+      & .navigation__link {
+        color: $text-color-2;
+      }
+    }
+  }
+
+  &__link {
+    font-size: $font-size-2;
+    line-height: $line-height-1;
+    letter-spacing: $letter-spacing-1;
+    color: $text-color-1;
+    text-decoration: none;
+    font-weight: 500;
+  }
+}

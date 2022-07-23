@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'TT Lakes';
+  src: local('TT Lakes'), url("../fonts/TTLakes-Regular.woff") format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: local('TT Lakes'), url("../fonts/TTLakes-Medium.woff") format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TT Lakes';
+  src: local('TT Lakes'), url("../fonts/TTLakes-Bold.woff") format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+$font-family: "TT Lakes", sans-serif;
+
+$font-size-1: 14px;
+$font-size-2: 16px;
+$font-size-3: 28px;
+$font-size-4: 24px;
+
+$line-height-1: 24px;
+$line-height-2: 40px;
+$line-height-3: 18px;
+$line-height-4: 20px;
+$line-height-5: 32px;
+
+$letter-spacing-1: -0.2px;
+$letter-spacing-2: -0.6px;
+$letter-spacing-3: 0.2px;
+
+$text-color-1: #1B1C21;
+$text-color-2: #7E7E82;
+
+$background-color-1: #FFFFFF;
+$background-color-2: #F8F8F8;
+
+$decoration-color-1: #D9FFF5;
+$decoration-color-2: #41F6D7;
+$decoration-color-3: #EAEAEA;
+
+$shadow-color-1: rgba(14, 24, 80, 0.2);
+$shadow-color-2: rgba(69, 79, 126, 0.02);
+
+$menu-button-background: no-repeat url('../img/icons/burger.svg');
+$call-button-background: no-repeat url('../img/icons/call.svg');
+$chat-button-background: no-repeat url('../img/icons/chat.svg');
+$profile-button-background: no-repeat url('../img/icons/profile.svg');
+$repair-button-background: no-repeat url('../img/icons/repair.svg');
+$checkstatus-button-background: no-repeat url('../img/icons/checkstatus.svg');
+$menu-button-background: no-repeat url('../img/icons/burger.svg');
+$close-menu-button-background: no-repeat url('../img/icons/close.svg');
+$search-button-background: no-repeat url('../img/icons/search.svg');
+$divider-background: no-repeat url('../img/icons/divider.svg');
+$dropdown-background: no-repeat url('../img/icons/expand.svg');
+$repair-brands-button-background: no-repeat url('../img/icons/go.svg');
+
+$screen-mobile:               320px;
+$screen-mobile-wide:          360px;
+$screen-tablet:               768px;
+$screen-wide:                1120px;

@@ -1,17 +1,32 @@
-$bgColor: #24292e;
-$text: #fff;
-
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
-
-body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
-}
+@import '../../node_modules/swiper/swiper.scss';
+@import '../../node_modules/normalize.css/normalize.css';
+@import './variables.scss';
+@import './page.scss';
+@import './overlay.scss';
+@import './header-container.scss';
+@import './left-column.scss';
+@import './right-column.scss';
+@import './button.scss';
+@import './menu-button.scss';
+@import './call-button.scss';
+@import './chat-button.scss';
+@import './profile-button.scss';
+@import './repair-button.scss';
+@import './checkstatus-button.scss';
+@import './logo.scss';
+@import './divider.scss';
+@import './only-tablet-item.scss';
+@import './container.scss';
+@import './nav-container.scss';
+@import './title-menu.scss';
+@import './slide-menu.scss';
+@import './main-container.scss';
+@import './about-text.scss';
+@import './dropdown.scss';
+@import './about-img.scss';
+@import './repair-brands.scss';
+@import './swiper-pagination.scss';
+@import './mobile-menu.scss';
+@import './close-menu-button.scss';
+@import './search-button.scss';
+@import './navigation.scss';

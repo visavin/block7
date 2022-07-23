@@ -1,0 +1,8 @@
+.nav-container {
+  margin: 0;
+  padding: 0;
+
+  @media screen and (min-width: $screen-wide) {
+    margin: 42px 22px 7px 2px;
+  }
+}

@@ -1,0 +1,111 @@
+.repair-brands {
+  box-sizing: border-box;
+  min-width: 320px;
+  background: $background-color-2;
+  transition: padding-bottom 500ms ease-in;
+
+  @media screen and (min-width: $screen-tablet) {
+    padding-bottom: 32px;
+  }
+
+  @media screen and (min-width: $screen-wide) {
+    padding-bottom: 50px;
+  }
+
+  &__title {
+    padding: 16px;
+    height: 80px;
+    border-top: $decoration-color-1 1px solid;
+    background-image: linear-gradient(90deg, $background-color-2 0%, $background-color-1 98.61%);
+
+    @media screen and (min-width: $screen-tablet) {
+      height: 56px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: $font-size-2;
+      line-height: $line-height-1;
+      letter-spacing: $letter-spacing-1;
+      text-transform: uppercase;
+      color: $text-color-2;
+      font-weight: 400;
+    }
+  }
+
+  &__swiper {
+    padding: 16px 16px 24px 16px;
+    height: auto;
+    width: 100%;
+    transition: height 500ms ease-in;
+
+    @media screen and (min-width: $screen-tablet) {
+      padding: 24px;
+      height: 200px;
+    }
+
+    @media screen and (min-width: $screen-wide) {
+      padding: 24px 32px;
+    }
+  }
+
+  &__wrapper {
+    height: auto;
+
+    @media screen and (min-width: $screen-tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 24px;
+      row-gap: 16px;
+    }
+
+    @media screen and (min-width: $screen-wide) {
+      column-gap: 32px;
+    }
+  }
+
+  &__slide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 240px;
+    height: 72px;
+    background: $background-color-1;
+    border: 1px solid $decoration-color-3;
+    border-radius: 6px;
+
+    @media screen and (min-width: $screen-tablet) {
+      width: 224px;
+    }
+
+    @media screen and (min-width: $screen-wide) {
+      width: 240px;
+    }
+  }
+
+  &__logo {
+    img {
+      margin: 20px 0 20px 16px;
+      vertical-align: middle
+    }
+  }
+
+  &__button {
+    margin: 16px 16px 16px 0;
+    background: $repair-brands-button-background;
+  }
+
+  &__read-more {
+    display: none;
+
+    @media screen and (min-width: $screen-tablet) {
+      display: block;
+      margin: 8px 0 0 24px;
+    }
+
+    @media screen and (min-width: $screen-wide) {
+      margin: 8px 0 18px 31px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  font-size: $font-size-1;
+  font-family: $font-family;
+  color: $text-color-1;
+  box-sizing: border-box;
+
+  @media screen and (min-width: $screen-wide) {
+    flex-direction: row;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}

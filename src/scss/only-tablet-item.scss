@@ -1,0 +1,7 @@
+.only-tablet-item {
+  display: none;
+
+  @media screen and (min-width: $screen-tablet) {
+    display: inline-block;
+  }
+}

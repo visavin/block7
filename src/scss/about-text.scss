@@ -1,0 +1,35 @@
+.about-text {
+  margin: 0 16px 16px 16px;
+
+  @media screen and (min-width: $screen-tablet) {
+    margin: 0 48px 46px 24px;
+  }
+
+  @media screen and (min-width: $screen-wide) {
+    margin: 9.22px 36px 0 34px;
+  }
+
+  &__text {
+    line-height: $line-height-3;
+    letter-spacing: $letter-spacing-3;
+    display: block;
+    height: 90px;
+    margin-block-start: 0;
+    margin-block-end: 16px;
+    overflow: hidden;
+
+    @media screen and (min-width: $screen-tablet) {
+      height: 160px;
+      line-height: $line-height-4;
+      margin-block-end: 10px;
+    }
+
+    @media screen and (min-width: $screen-wide) {
+      margin-block-end: 13.78px;
+    }
+  }
+
+  &__button {
+    margin: 0;
+  }
+}

@@ -1,0 +1,10 @@
+.container {
+  background: $background-color-2;
+  display: flex;
+  flex-flow: column;
+  border-top: 1px solid $decoration-color-1;
+
+  @media screen and (min-width: $screen-wide) {
+    border: 0;
+  }
+}

@@ -1,0 +1,9 @@
+.main-container {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: $screen-tablet) {
+    flex-wrap: nowrap;
+  }
+}

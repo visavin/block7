@@ -47,5 +47,9 @@
     "plugins": {
       "autoprefixer": {}
     }
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "swiper": "^8.3.1"
   }
 }

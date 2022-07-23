@@ -1,0 +1,21 @@
+.button {
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  border: 0;
+  width: 40px;
+  height: 40px;
+  transition-duration: 250ms;
+
+  &:not(.dropdown):hover {
+    filter: invert(100%) contrast(200%);
+  }
+
+  &:not(.dropdown):focus{
+    opacity: 0.4;
+  }
+
+  &:not(.dropdown):active {
+    transform: scale(90%);
+  }
+}

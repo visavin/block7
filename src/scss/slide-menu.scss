@@ -1,0 +1,62 @@
+.slide-menu {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: auto;
+  /* Скрываем scrollbar для IE, Edge и Firefox */
+  -ms-overflow-style: none;  /* IE и Edge */
+  scrollbar-width: none;  /* Firefox */
+  padding: 24px 16px;
+  gap: 10.26px;
+
+  @media screen and (min-width: $screen-tablet) {
+    padding: 32px 24px;
+  }
+
+  @media screen and (min-width: $screen-wide) {
+    padding: 8.37px 0 3px 32px;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  &::-webkit-scrollbar {
+    /* Скрываем scrollbar для Chrome, Safari и Opera */
+    display: none;
+  }
+
+  &__button {
+    flex: 1 0 auto;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    padding: 8px 9.3px 8px 16.54px;
+
+    @media screen and (min-width: $screen-wide) {
+      flex: 0 1 auto;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: #FFFFFF;
+      border: 2px solid #B8FFEC;
+      border-radius: 6px;
+      padding: 6px 7.3px 6px 14.54px;
+    }
+
+    a {
+      color: #7E7E82;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    &--active {
+      background: #FFFFFF;
+      border: 2px solid #B8FFEC;
+      border-radius: 6px;
+      padding: 6px 7.3px 6px 14.54px;
+    }
+  }
+}

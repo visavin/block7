@@ -1,0 +1,24 @@
+.about-img {
+  display: block;
+
+  @media screen and (min-width: $screen-tablet) {
+    margin-right: 24px;
+  }
+
+  @media screen and (min-width: $screen-wide) {
+    margin-right: 28.65px;
+    margin-bottom: 51px;
+  }
+
+  img {
+    width: 100vw;
+
+    @media screen and (min-width: $screen-tablet) {
+      max-width: 360px;
+    }
+
+    @media screen and (min-width: $screen-wide) {
+      max-width: 531.35px;
+    }
+  }
+}
