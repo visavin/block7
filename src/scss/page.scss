@@ -8,9 +8,12 @@
   font-family: $font-family;
   color: $text-color-1;
   box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
 
   @media screen and (min-width: $screen-wide) {
     flex-direction: row;
+    //overflow: hidden;
   }
 }
 
