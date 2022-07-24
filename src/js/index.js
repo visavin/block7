@@ -9,6 +9,11 @@ import Swiper, { Navigation, Pagination } from 'swiper';
   const overlay = document.querySelector('.overlay')
   const menu = document.querySelector('.mobile-menu')
 
+  window.addEventListener('resize', () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  });
+
   function doAction (action) {
     switch (action) {
       case 'open menu':
