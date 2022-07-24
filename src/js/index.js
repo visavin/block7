@@ -9,28 +9,28 @@ import Swiper, { Navigation, Pagination } from 'swiper';
   const overlay = document.querySelector('.overlay')
   const menu = document.querySelector('.mobile-menu')
 
-  window.addEventListener('resize', () => {
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-  });
+  // window.addEventListener('resize', () => {
+  //   let vh = window.innerHeight * 0.01;
+  //   document.documentElement.style.setProperty('--vh', `${vh}px`);
+  // });
 
   function doAction (action) {
     switch (action) {
       case 'open menu':
         menu.classList.add('mobile-menu--active')
         overlay.classList.add('overlay--active')
-        document.body.style.overflow= 'hidden';
+        // document.body.style.overflow= 'hidden';
         return
       case 'close menu':
         menu.classList.remove('mobile-menu--active')
         overlay.classList.remove('overlay--active')
-        document.body.style.overflow = '';
+        // document.body.style.overflow = '';
         return
       default:
         menu.classList.remove('mobile-menu--active')
         // modal.classList.remove('modal--active')
         overlay.classList.remove('overlay--active')
-        document.body.style.overflow = '';
+        // document.body.style.overflow = '';
     }
   }
 
