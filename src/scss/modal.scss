@@ -1,0 +1,44 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: block;
+  min-width: 320px;
+  width: 100vw;
+  height: 100vh;
+  background: $background-color-1;
+  transform: translateX(100%);
+  transition: all 0.75s ease-out;
+  opacity: 0.25;
+  z-index: 4;
+
+  @media screen and (min-width: $screen-tablet) {
+    width: 440px;
+    box-shadow:
+      -2px 0px 4px $shadow-color-2,
+      16px 0px 52px $shadow-color-1;
+  }
+
+  .close-menu-button {
+    margin: 24px 0 0 16px;
+
+    @media screen and (min-width: $screen-tablet) {
+      display: none;
+    }
+  }
+
+  &--active {
+    transform: translateX(0);
+    opacity: 1;
+
+    @media screen and (min-width: $screen-tablet) {
+      .close-menu-button {
+        display: block;
+        margin: 0;
+        position: absolute;
+        top: 32px;
+        left: -72px;
+      }
+    }
+  }
+}

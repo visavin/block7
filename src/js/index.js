@@ -8,8 +8,10 @@ import Swiper, { Navigation, Pagination } from 'swiper';
   const leadButtons = document.querySelectorAll('.lead-button')
   const overlay = document.querySelector('.overlay')
   const menu = document.querySelector('.mobile-menu')
+  const modal = document.querySelector('.modal')
+  const requestCall = document.getElementById('request-call')
 
-  function doAction (action) {
+  function doAction (action, type) {
     switch (action) {
       case 'open menu':
         menu.classList.add('mobile-menu--active')
@@ -21,9 +23,25 @@ import Swiper, { Navigation, Pagination } from 'swiper';
         overlay.classList.remove('overlay--active')
         document.body.style.overflow = '';
         return
+      case 'open modal':
+        if (type === 'request call') {
+          requestCall.classList.add('form--active')
+          // feedbackMessage.classList.remove('form--active')
+          requestCall.getElementsByClassName('form__input')[0].focus();
+        }
+        menu.classList.remove('mobile-menu--active')
+        modal.classList.add('modal--active')
+        overlay.classList.add('overlay--active')
+        document.body.style.overflow= 'hidden';
+        return
+      case 'close modal':
+        modal.classList.remove('modal--active')
+        overlay.classList.remove('overlay--active')
+        document.body.style.overflow = '';
+        return
       default:
         menu.classList.remove('mobile-menu--active')
-        // modal.classList.remove('modal--active')
+        modal.classList.remove('modal--active')
         overlay.classList.remove('overlay--active')
         document.body.style.overflow = '';
     }
@@ -36,7 +54,7 @@ import Swiper, { Navigation, Pagination } from 'swiper';
   for (let i = 0; i < leadButtons.length; i++) {
     if (leadButtons[i].dataset.action !== undefined) {
       leadButtons[i].addEventListener('click', (ev) => {
-        doAction(ev.target.dataset.action)
+        doAction(ev.target.dataset.action, ev.target.dataset.type)
       })
     }
   }
@@ -125,7 +143,6 @@ import Swiper, { Navigation, Pagination } from 'swiper';
         el: '.swiper-pagination', clickable: true
       }, slidesPerView: 'auto', spaceBetween: 16, freeMode: true
     })
-    console.log('Swiper Works!');
   }
   breakpoint.addEventListener('change', breakpointChecker)
   breakpointChecker()

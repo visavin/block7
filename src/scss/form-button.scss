@@ -1,0 +1,27 @@
+.form-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+  height: 32px;
+  width: 136px;
+  background: #FF3E79;
+  border-radius: 16px;
+  cursor: pointer;
+
+  &__value {
+    font-family: $font-family;
+    font-size: $font-size-5;
+    line-height: $line-height-1;
+    text-align: right;
+    letter-spacing: $letter-spacing-4;
+    text-transform: uppercase;
+    color: $background-color-1;
+    font-weight: 500;
+  }
+
+  &__icon {
+    width: 27.43px;
+    height: 24px;
+  }
+}

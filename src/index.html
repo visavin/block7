@@ -54,7 +54,11 @@
     <div class="mobile-menu__footer">
       <ul>
         <li>
-          <button class="button call-button" title="Позвонить"></button>
+          <button class="button call-button lead-button"
+                  data-action="open modal"
+                  data-type="request call"
+                  title="Заказать звонок">
+          </button>
         </li>
         <li>
           <button class="button chat-button" title="Написать"></button>
@@ -102,7 +106,11 @@
       </ul>
       <ul class="header-container__column right-column">
         <li class="only-tablet-item">
-          <button class="button call-button" title="Позвонить"></button>
+          <button class="button call-button lead-button"
+                  data-action="open modal"
+                  data-type="request call"
+                  title="Заказать звонок">
+          </button>
         </li>
         <li class="only-tablet-item">
           <button class="button chat-button" title="Написать"></button>
@@ -272,6 +280,32 @@
       </div>
     </footer>
   </div>
+
+  <aside class="modal">
+    <button class="button close-menu-button lead-button"
+            data-action="close modal" title="Закрыть модальное окно">
+    </button>
+    <form class="form" id="request-call" action="#">
+      <h2 class="form__header">Заказать звонок</h2>
+      <label>
+        <input class="form__input" type="tel" name="phone" placeholder="Телефон" required autofocus />
+      </label>
+      <p class="form__agreements">
+        Нажимая “отправить”, вы даете согласие на
+        <a title="Открыть документ &#171;Политика обработки персональных данных&#187;" href="#">
+          обработку персональных данных
+        </a>
+        и соглашаетесь с нашей
+        <a title="Открыть документ &#171;Политика конфиденциальностии&#187;" href="#">
+          политикой конфиденциальности
+        </a>
+      </p>
+      <button title="Отправить форму" type="submit" form="request-call" class="button form-button">
+        <span class="form-button__value">Отправить</span>
+        <img class="form-button__icon" src="./img/icons/goside.svg" alt=">" />
+      </button>
+    </form>
+  </aside>
 </div>
 </body>
 </html>
