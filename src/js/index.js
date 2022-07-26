@@ -10,6 +10,7 @@ import Swiper, { Navigation, Pagination } from 'swiper';
   const menu = document.querySelector('.mobile-menu')
   const modal = document.querySelector('.modal')
   const requestCall = document.getElementById('request-call')
+  const feedbackMessage = document.getElementById('feedback-message')
 
   function doAction (action, type) {
     switch (action) {
@@ -17,33 +18,44 @@ import Swiper, { Navigation, Pagination } from 'swiper';
         menu.classList.add('mobile-menu--active')
         overlay.classList.add('overlay--active')
         document.body.style.overflow= 'hidden';
+        menu.style.overflow= 'auto';
         return
       case 'close menu':
         menu.classList.remove('mobile-menu--active')
         overlay.classList.remove('overlay--active')
         document.body.style.overflow = '';
+        menu.style.overflow= '';
         return
       case 'open modal':
         if (type === 'request call') {
           requestCall.classList.add('form--active')
-          // feedbackMessage.classList.remove('form--active')
+          feedbackMessage.classList.remove('form--active')
           requestCall.getElementsByClassName('form__input')[0].focus();
+        }
+        if (type === 'feedback message') {
+          feedbackMessage.classList.add('form--active')
+          requestCall.classList.remove('form--active')
+          feedbackMessage.getElementsByClassName('form__input')[0].focus();
         }
         menu.classList.remove('mobile-menu--active')
         modal.classList.add('modal--active')
         overlay.classList.add('overlay--active')
+        modal.style.overflow= 'auto';
         document.body.style.overflow= 'hidden';
         return
       case 'close modal':
         modal.classList.remove('modal--active')
         overlay.classList.remove('overlay--active')
         document.body.style.overflow = '';
+        modal.style.overflow= '';
         return
       default:
         menu.classList.remove('mobile-menu--active')
         modal.classList.remove('modal--active')
         overlay.classList.remove('overlay--active')
         document.body.style.overflow = '';
+        menu.style.overflow= '';
+        modal.style.overflow= '';
     }
   }
 

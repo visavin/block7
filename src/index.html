@@ -61,7 +61,11 @@
           </button>
         </li>
         <li>
-          <button class="button chat-button" title="Написать"></button>
+          <button class="button chat-button lead-button"
+                  data-action="open modal"
+                  data-type="feedback message"
+                  title="Обратная связь">
+          </button>
         </li>
         <li>
           <button class="button profile-button" title="Профиль"></button>
@@ -113,7 +117,11 @@
           </button>
         </li>
         <li class="only-tablet-item">
-          <button class="button chat-button" title="Написать"></button>
+          <button class="button chat-button lead-button"
+                  data-action="open modal"
+                  data-type="feedback message"
+                  title="Обратная связь">
+          </button>
         </li>
         <li class="only-tablet-item">
           <button class="button profile-button" title="Профиль"></button>
@@ -289,6 +297,35 @@
       <h2 class="form__header">Заказать звонок</h2>
       <label>
         <input class="form__input" type="tel" name="phone" placeholder="Телефон" required autofocus />
+      </label>
+      <p class="form__agreements">
+        Нажимая “отправить”, вы даете согласие на
+        <a title="Открыть документ &#171;Политика обработки персональных данных&#187;" href="#">
+          обработку персональных данных
+        </a>
+        и соглашаетесь с нашей
+        <a title="Открыть документ &#171;Политика конфиденциальностии&#187;" href="#">
+          политикой конфиденциальности
+        </a>
+      </p>
+      <button title="Отправить форму" type="submit" form="request-call" class="button form-button">
+        <span class="form-button__value">Отправить</span>
+        <img class="form-button__icon" src="./img/icons/goside.svg" alt=">" />
+      </button>
+    </form>
+    <form class="form" id="feedback-message" action="#">
+      <h2 class="form__header">Обратная связь</h2>
+      <label>
+        <input class="form__input" type="text" name="name" placeholder="Имя" required autofocus />
+      </label>
+      <label>
+        <input class="form__input" type="tel" name="phone" placeholder="Телефон" required />
+      </label>
+      <label>
+        <input class="form__input" type="email" name="email" placeholder="Электронная почта" required />
+      </label>
+      <label>
+        <textarea class="form__input form__input--textarea" name="message" placeholder="Сообщение"></textarea>
       </label>
       <p class="form__agreements">
         Нажимая “отправить”, вы даете согласие на
