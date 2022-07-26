@@ -1,4 +1,4 @@
-.repair-brands {
+.repair {
   box-sizing: border-box;
   min-width: 320px;
   background: $background-color-2;
@@ -67,10 +67,8 @@
   &__slide {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     box-sizing: border-box;
     width: 240px;
-    height: 72px;
     background: $background-color-1;
     border: 1px solid $decoration-color-3;
     border-radius: 6px;
@@ -84,7 +82,7 @@
     }
   }
 
-  &__logo {
+  &__content {
     img {
       margin: 20px 0 20px 16px;
       vertical-align: middle
@@ -105,7 +103,7 @@
     }
 
     @media screen and (min-width: $screen-wide) {
-      margin: 8px 0 18px 31px;
+      margin: 8px 0 0 31px;
     }
   }
 }

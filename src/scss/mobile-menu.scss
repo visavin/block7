@@ -19,7 +19,7 @@
   }
 
   @media screen and (min-width: $screen-wide) {
-    position: sticky;
+    position: relative;
     opacity: 1;
     transform: unset;
     z-index: 0;
