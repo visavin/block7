@@ -1,6 +1,6 @@
 .swiper-pagination {
-  display: flex; //изменяем тип отображения на flex-контейнер
-  justify-content: center; //центрируем bullets по горизонтали
+  display: flex;
+  justify-content: center;
   margin-top: 16px;
 
   @media screen and (min-width: $screen-tablet) {
@@ -8,14 +8,14 @@
   }
 
   &-bullet {
-    height: 12px; // устанавливаем высоту bullets на 12 px
-    width: 12px;  // устанавливаем ширину bullets на 12 px
-    background: #DDD;  // устанавливаем цвет неактивных bullets
-    border-radius: 50%;  // делаем их круглыми
-    margin: 0 6px;  // устанавливаем отступ по горизонтали в 6px
+    height: 12px;
+    width: 12px;
+    background: $decoration-color-5;
+    border-radius: 50%;
+    margin: 0 6px;
 
     &-active {
-      background: #B5B6BC; //устанавливем цвет для активных bullets
+      background: $text-color-3;
     }
   }
 }

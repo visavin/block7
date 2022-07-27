@@ -1,0 +1,62 @@
+.price-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  width: 100%;
+  margin: 16px;
+
+  @media screen and (min-width: $screen-tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row nowrap;
+    gap: 12px;
+  }
+
+  @media screen and (min-width: $screen-wide) {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  &__content {
+    @media screen and (min-width: $screen-tablet) {
+      &:first-child {
+        flex: 1;
+        flex-basis: 55%;
+      }
+
+      &:nth-child(2) {
+        flex: 1;
+        flex-basis: 12.5%;
+      }
+
+      &:nth-child(3) {
+        flex: 1;
+        flex-basis: 13.5%;
+      }
+    }
+  }
+
+  &__header {
+    &>h4 {
+      margin: 0;
+      font-size: $font-size-1;
+      line-height: $line-height-6;
+      color: $text-color-2;
+      opacity: 0.72;
+    }
+
+    @media screen and (min-width: $screen-tablet) {
+      display: none;
+    }
+  }
+
+  &__description {
+    margin: 4px 0;
+    font-size: $font-size-1;
+    line-height: $line-height-3;
+    letter-spacing: $letter-spacing-3;
+    color: $text-color-1;
+  }
+}

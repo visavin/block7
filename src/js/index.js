@@ -114,8 +114,6 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 
   function toggleHeight(button, block, blockHeight, hiddenBlockHeight, dropdownText, dropdownIcon) {
     const innerText = dropdownText.textContent
-    // button.addEventListener('click', (ev) => {
-    //   const isDropped = ev.target.classList.toggle('dropped')
     button.onclick = function () {
       const isDropped = this.classList.toggle('dropped')
       if (isDropped) {
@@ -134,6 +132,7 @@ import Swiper, { Navigation, Pagination } from 'swiper';
   const brandsSwiper = document.querySelector('.brands__swiper')
   const technicDropDownButton = document.querySelector('.technic__read-more')
   const technicSwiper = document.querySelector('.technic__swiper')
+  const priceSwiper = document.querySelector('.price__swiper')
 
 
   const repair = document.querySelector('.repair')
@@ -143,6 +142,7 @@ import Swiper, { Navigation, Pagination } from 'swiper';
     if (breakpoint.matches === false) {
       brandsSwiper.style.height = '200px'
       technicSwiper.style.height = '200px'
+      priceSwiper.style.height = '387px'
       repair.style.paddingBottom = ''
       brandsDropdownText.textContent = 'Показать все'
       brandsDropdownIcon.style.transform = 'none';
@@ -154,6 +154,7 @@ import Swiper, { Navigation, Pagination } from 'swiper';
       technicDropDownButton.classList.remove('dropped')
       brandsSwiper.style.height = '140px'
       technicSwiper.style.height = '228px'
+      priceSwiper.style.height = '244px'
       repair.style.paddingBottom = '0px'
       return enableSwiper()
     }
@@ -169,5 +170,3 @@ import Swiper, { Navigation, Pagination } from 'swiper';
   breakpoint.addEventListener('change', breakpointChecker)
   breakpointChecker()
 })()
-
-console.log('Works!');

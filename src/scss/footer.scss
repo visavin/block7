@@ -2,6 +2,7 @@
   height: auto;
   background-color: $background-color-2;
   width: auto;
+  margin-bottom: 19px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,24 +12,22 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
+    margin: 0;
     padding: 32px 24px 25px 24px;
   }
 
   @media screen and (min-width: $screen-wide) {
-    padding: 32px 32px 21px 32px;
+    padding: 32px 33px 21px 31px;
   }
 
-  div {
-    padding: 16px 4px 19px 4px;
+  &>div {
+    padding: 16px 4px 0 4px;
     text-align: center;
 
     @media screen and (min-width: $screen-tablet) {
       padding: 0;
       width: 33.33%;
-
-      &:first-child {
-        text-align: left;
-      }
+      text-align: left;
 
       &:last-child {
         text-align: right;
@@ -37,7 +36,7 @@
 
     p,
     a {
-      font-family: $font-family;
+      margin: 0;
       font-size: $font-size-1;
       line-height: $line-height-6;
       color: $text-color-2;

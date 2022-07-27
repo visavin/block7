@@ -1,6 +1,15 @@
 .brands {
   &__slide {
     height: 72px;
+    width: 240px;
     align-items: center;
+
+    @media screen and (min-width: $screen-tablet) {
+      width: 224px;
+    }
+
+    @media screen and (min-width: $screen-wide) {
+      width: 240px;
+    }
   }
 }

@@ -1,0 +1,144 @@
+.price {
+  @media screen and (min-width: $screen-tablet) {
+    padding-bottom: 0;
+  }
+
+  &__swiper {
+    padding: 16px 8px 0 8px;
+
+    @media screen and (min-width: $screen-tablet) {
+      padding: 63px 24px 0 24px;
+      height: 387px;
+    }
+
+    @media screen and (min-width: $screen-wide) {
+      padding: 63px 32px 0 32px;
+    }
+  }
+
+  &__wrapper {
+    @media screen and (min-width: $screen-tablet) {
+      gap: 0;
+    }
+  }
+
+  &__slide {
+    height: 200px;
+    width: 260px;
+
+    @media screen and (min-width: $screen-tablet) {
+      height: 64px;
+      width: 100%;
+      border: none;
+      border-radius: 0;
+    }
+
+    &:first-child {
+      @media screen and (min-width: $screen-tablet) {
+        border-radius: 6px 6px 0 0;
+      }
+
+      .price-layout__content:before {
+        @media screen and (min-width: $screen-tablet) {
+          position: absolute;
+          margin-top: -51px;
+          font-size: $font-size-1;
+          line-height: $line-height-6;
+          color: $text-color-2;
+          opacity: 0.72;
+        }
+      }
+
+      .price-layout__content:first-child:before {
+        @media screen and (min-width: $screen-tablet) {
+          content: 'Ремонтные услуги';
+        }
+      }
+
+      .price-layout__content:nth-child(2):before {
+        @media screen and (min-width: $screen-tablet) {
+          content: 'Цена';
+        }
+      }
+
+      .price-layout__content:nth-child(3):before {
+        @media screen and (min-width: $screen-tablet) {
+          content: 'Срок';
+        }
+      }
+    }
+
+    &:last-child {
+      @media screen and (min-width: $screen-tablet) {
+        border-radius: 0 0 6px 6px;
+      }
+    }
+
+    &:not(:last-child) {
+      &::after {
+        @media screen and (min-width: $screen-tablet) {
+          content: '';
+          position: absolute;
+          width: calc(100% - 32px);
+          height: 1px;
+          background-color: #eaeaea;
+          left: 16px;
+          bottom: 0;
+        }
+
+        @media screen and (min-width: $screen-wide) {
+          width: calc(100% - 48px);
+          left: 24px;
+        }
+      }
+    }
+  }
+
+  &__description {
+    margin: 16px;
+    font-size: $font-size-1;
+    line-height: $line-height-4;
+    letter-spacing: $letter-spacing-3;
+    color: $text-color-1;
+
+    @media screen and (min-width: $screen-tablet) {
+      margin: 24px 0 16px 24px;
+      width: 421px;
+    }
+
+    @media screen and (min-width: $screen-wide) {
+      margin: 32px 0 16px 32px;
+    }
+  }
+
+  &__link {
+    margin: 0 112px 40px 16px;
+    width: auto;
+
+    @media screen and (min-width: $screen-tablet) {
+      margin: 0 112px 47px 24px;
+    }
+
+    @media screen and (min-width: $screen-wide) {
+      margin: 0 112px 50px 32px;
+    }
+
+    &>a {
+      font-size: $font-size-2;
+      line-height: $line-height-1;
+      letter-spacing: $letter-spacing-1;
+      color: $text-color-1;
+      text-decoration: none;
+      font-weight: 500;
+
+      &::after {
+        content: '>';
+        display: inline-block;
+        color: $decoration-color-4;
+        margin-left: 6px;
+        transform: scale(0.8, 1.8) translateY(-1px);
+        font-weight: 500;
+      }
+    }
+  }
+}
