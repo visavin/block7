@@ -53,6 +53,9 @@
   }
 
   &__wrapper {
+    padding: 0;
+    margin: 0;
+    list-style: none;
     height: auto;
 
     @media screen and (min-width: $screen-tablet) {
@@ -68,6 +71,8 @@
   }
 
   &__slide {
+    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
